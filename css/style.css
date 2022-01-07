@@ -10,6 +10,10 @@
 a{
     text-decoration: none;
 }
+figure{
+    margin: 0px;
+    display: initial;
+}
 .hero{
     height: 100vh;
     width: 100%;
@@ -36,6 +40,8 @@ header .container .logo{
     color: white;
     font-weight: 600;
     font-size: 22px;
+    position: relative;
+    left: -95px;
 }
 header .container ul{
     margin: 0px;
@@ -79,6 +85,12 @@ header .container ul li .btn:hover{
 .section1{
     padding: 65px 0px;
 }
+.section1 .pr-9{
+    padding-right: 9px;
+}
+.section1 .pl-9{
+    padding-left: 9px;
+}
 .section1 h5{
     text-align: center;
     font-size: 35px;
@@ -86,7 +98,7 @@ header .container ul li .btn:hover{
     margin-bottom: 70px;
 }
 .section1 p{
-    font-size: 20px;
+    font-size: 21px;
 }
 .section2{
     background: #000000;
@@ -106,7 +118,7 @@ header .container ul li .btn:hover{
     color: white;
     font-size: 17px;
 }
-.section2 .f-22{
+.section2 .f-21{
     font-size: 21px;
 }
 .section3{
@@ -141,16 +153,16 @@ header .container ul li .btn:hover{
     font-weight: 700;
     margin-bottom: 40px;
 }
-.section4 .w-835{
+.section4 .w-827{
     max-width: 827px;
     margin: auto;
 }
-.section4 .w-835 .f-21{
+.section4 .w-827 .f-21{
     font-size: 21px;
     text-align: center;
     margin-bottom: 90px;
 }
-.section4 .w-835 .inner p{
+.section4 .w-827 .inner p{
     font-weight: 700;
     margin-top: 10px;
     margin-bottom: 0px;
@@ -159,7 +171,7 @@ header .container ul li .btn:hover{
     padding-top: 200px;
     padding-bottom: 105px;
 }
-.section5 .w-835{
+.section5 .blog-container{
     max-width: 827px;
     margin: auto;
 }
@@ -218,15 +230,15 @@ footer{
     background: #EFEDED;
     padding-top: 85px;
 }
-footer .w-835{
+footer .w-827{
     max-width: 827px;
     margin: auto;
 }
-footer .w-835 .newsletter{
+footer .w-827 .newsletter{
     position: relative;
     margin-bottom: 60px;
 }
-footer .w-835 .newsletter .btn{
+footer .w-827 .newsletter .btn{
     background: #050505;
     color: white;
     border-radius: 0;
@@ -237,13 +249,13 @@ footer .w-835 .newsletter .btn{
     font-size: 19px;
     font-weight: bold;
 }
-footer .w-835 .newsletter input{
+footer .w-827 .newsletter input{
     border-radius: 0;
     border: none;
     padding: 0.45rem 0.75rem;
     height: 48px;
 }
-footer .w-835 .newsletter input::placeholder{
+footer .w-827 .newsletter input::placeholder{
     color: #D9D8D8;
     font-size: 21px;
 }
@@ -296,13 +308,47 @@ footer .w-835 .newsletter input::placeholder{
     display: none;
 }
 
+@media only screen and (max-width: 1440px) {
+    header .container .logo {
+        left: -50px;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    header .container .logo {
+        left: -90px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    header .container .logo {
+        left: -50px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    header .container .logo {
+        left: -20px;
+    }
+}
+
 @media only screen and (max-width: 800px) {
     .section3 .container {
         padding: 0px 50px;
     }
+    header .container .logo{
+        left: 0px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
+    header{
+        background: white;
+    }
+    header .container .logo{
+        color: black;
+    }
+
     .hero h1{
         font-size: 70px;
     }
@@ -312,7 +358,7 @@ footer .w-835 .newsletter input::placeholder{
     .section2 img{
         margin-bottom: 30px;
     }
-    .section4 .w-835 .inner{
+    .section4 .w-827 .inner{
         margin-bottom: 50px;
     }
     .section5 .blog{
@@ -328,6 +374,27 @@ footer .w-835 .newsletter input::placeholder{
 }
 
 @media only screen and (max-width: 599px){
+    header .container ul li:last-child{
+        border-bottom: none;
+    }
+    header .container ul li a:hover{
+        border: none;
+    }
+    .section1 .pl-9 {
+        padding-left: 12px;
+    }
+    .section1 .pr-9 {
+        padding-right: 12px;
+    }
+    header {
+        padding: 0px 0px;
+        height: 62px;
+        position: fixed;
+    }
+    header .container{
+        height: 62px;
+        padding-right: 0px;
+    }
     .hero h1 {
         font-size: 45px;
     }
@@ -356,7 +423,7 @@ footer .w-835 .newsletter input::placeholder{
     .section4 h5{
         font-size: 28px;
     }
-    .section4 .w-835 .f-21 {
+    .section4 .w-827 .f-21 {
         font-size: 17px;
         text-align: center;
         margin-bottom: 50px;
@@ -380,38 +447,48 @@ footer .w-835 .newsletter input::placeholder{
         border-radius: 50px;
         padding: 15px 80px;
     }
-    footer .w-835 .newsletter input::placeholder{
+    footer .w-827 .newsletter input::placeholder{
         color: #D9D8D8;
         font-size: 16px;
     }
     .menuBtn{
-        display: block;
-        color: white;
-        font-size: 25px;
+        display: flex;
+        color: black;
+        align-items: center;
+        justify-content: center;
+        height: 62px;
+        width: 60px;
+        font-size: 35px;
     }
     header .container ul{
         position: absolute;
-        top: -18px;
+        top: 62px;
         left: 0;
-        background: white;
+        background: #298D7F;
         width: 100%;
-        padding-top: 30px;
+        padding-top: 20px;
         display: none;
+        height: 100vh;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     header .container ul li{
         display: block;
-        margin-bottom: 15px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        border-bottom: 1px solid #195f55;
     }
     header .container ul li a{
-        color: black;
-        margin-left: 15px;
+        color: white;
+        margin-left: 0px;
     }
     .closeBtn{
-        display: block;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        color: black;
-        font-size: 20px;
+        display: none;
+        color: white;
+        font-size: 35px;
+        height: 62px;
+        width: 60px;
+        align-items: center;
+        justify-content: center;
     }
 }
