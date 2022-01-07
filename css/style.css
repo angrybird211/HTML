@@ -76,6 +76,9 @@ header .container ul li .btn:hover{
     color: #FA376C;
     background: white;
 }
+.mobile-menu{
+    display: none;
+}
 .hero h1{
     color: white;
     font-size: 90px;
@@ -374,6 +377,119 @@ footer .w-827 .newsletter input::placeholder{
 }
 
 @media only screen and (max-width: 599px){
+    .mobile-menu{
+        display: none;
+        position: fixed;
+        width: 100%;
+        min-height:calc(100vh - 62px) ;
+        top: 62px;
+        left: 0;
+        background: #298D7F;
+    }
+    .mobile-menu ul{
+        margin: 0px;
+        padding: 0px;
+        padding-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .mobile-menu ul li{
+        list-style: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-bottom: 1px solid #195f55;
+    }
+    .mobile-menu ul li a{
+        color: white;
+        font-size: 20px;
+    }
+    .mobile-menu .bottom-section{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        padding: 20px 30px;
+    }
+    .mobile-menu .bottom-section p{
+        color: white;
+        margin-bottom: 0;
+        font-size: 18px;
+    }
+    .mobile-menu .bottom-section h5{
+        color: white;
+        font-size: 30px;
+        letter-spacing: 9px;
+    }
+    .mobile-menu .bottom-section .btn{
+        background-color: white;
+        color: #298D7F;
+        width: 100%;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .mobile-menu ul li .accordion-body{
+        padding-left: 0px;
+    }
+    .mobile-menu ul li .accordion-body ul{
+        padding-top:0px ;
+    }
+    .mobile-menu ul li .accordion-body ul li{
+        padding: 5px 0px;
+        border: none;
+    }
+    .mobile-menu ul li .accordion-item{
+        background: transparent;
+        border: none;
+    }
+    .mobile-menu ul li .accordion-item .accordion-button{
+        padding: 0px;
+        border: none;
+        color: white;
+        background: transparent;
+        outline: none;
+        box-shadow: none;
+        font-size: 20px;
+        position: relative;
+        transform: none !important;
+        transition: none !important;
+    }
+    .mobile-menu ul li .accordion-item .collapsed::after{
+        content: '+' !important;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        top: 0px !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    .mobile-menu ul li .accordion-item .accordion-button::after{
+        content: '-';
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        top: 0px;
+        background-image: none;
+        transform: none !important;
+        transition: none !important;
+    }
+    .mobile-menu ul li .accordion-item .accordion-button:focus{
+        box-shadow: none;
+        outline: none;
+    }
+    .accordion-button:not(.collapsed){
+        background: transparent;
+    }
     header .container ul li:last-child{
         border-bottom: none;
     }
@@ -490,5 +606,23 @@ footer .w-827 .newsletter input::placeholder{
         width: 60px;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .mobile-menu{
+        min-height: unset;
+    }
+    .mobile-menu .bottom-section{
+        position: static;
+        padding-top: 140px;
+    }
+}
+@media only screen and (max-width: 320px){
+    .mobile-menu .bottom-section{
+        padding-top: 80px;
+    }
+    .mobile-menu .bottom-section h5 {
+        font-size: 25px;
     }
 }
