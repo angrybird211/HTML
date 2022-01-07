@@ -6,10 +6,20 @@
     src: url(../font/Gen\ Jyuu\ Gothic\ Monospace\ Medium.ttf);
   }
 
+  @font-face {
+    font-family: futura;
+    src: url(../font/futura\ medium\ bt.ttf);
+  }
+  @font-face {
+    font-family: futuraBold;
+    src: url(../font/Futura\ Bold\ font.ttf);
+  }
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: futura;
 }
 a{
     text-decoration: none;
@@ -64,12 +74,23 @@ header .container ul li a{
     font-family: 'Noto Sans', sans-serif;
     padding-bottom: 10px;
     transition: 0.5s;
+    position: relative;
 }
-header .container ul li a:hover{
-    border-bottom: 1px solid white;
+header .container ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
 }
-header .container ul li .no-br:hover{
-    border-bottom: none;
+header .container ul li a:hover::after{
+    width: 100%;
+}
+header .container ul li .no-br::after{
+    display: none;
 }
 header .container ul li .btn{
     color: white;
@@ -108,6 +129,7 @@ header .container ul li .btn:hover{
     font-size: 35px;
     font-weight: 700;
     margin-bottom: 70px;
+    font-family: futuraBold;
 }
 .section1 p{
     font-size: 21px;
@@ -125,6 +147,7 @@ header .container ul li .btn:hover{
     font-weight: 700;
     margin-bottom: 70px;
     color: white;
+    font-family: futuraBold;
 }
 .section2 p{
     color: white;
@@ -164,6 +187,7 @@ header .container ul li .btn:hover{
     font-size: 35px;
     font-weight: 700;
     margin-bottom: 40px;
+    font-family: futuraBold;
 }
 .section4 .w-827{
     max-width: 827px;
@@ -198,6 +222,7 @@ header .container ul li .btn:hover{
 .section5 .blog h5{
     font-size: 16px;
     font-weight: 700;
+    font-family: futuraBold;
 }
 .section5 .blog .blog-text{
     color: #B5B1B1;
@@ -225,6 +250,7 @@ header .container ul li .btn:hover{
     font-size: 35px;
     font-weight: 700;
     margin: 0;
+    font-family: futuraBold;
 }
 .section6 .wrapper p{
     color: white;
@@ -290,6 +316,7 @@ footer .w-827 .newsletter input::placeholder{
     font-size: 23px;
     font-weight: bold;
     margin-bottom: 35px;
+    font-family: 'futuraBold';
 }
 .lowerFooter ul{
     margin: 0;
@@ -430,7 +457,7 @@ footer .w-827 .newsletter input::placeholder{
     }
     .mobile-menu .bottom-section h5{
         color: white;
-        font-size: 30px;
+        font-size: 25px;
         letter-spacing: 9px;
     }
     .mobile-menu .bottom-section .btn{
@@ -636,6 +663,6 @@ footer .w-827 .newsletter input::placeholder{
         padding-top: 80px;
     } */
     .mobile-menu .bottom-section h5 {
-        font-size: 25px;
+        font-size: 20px;
     }
 }
