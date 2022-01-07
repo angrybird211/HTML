@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans:wght@400;700&display=swap');
+@font-face {
+    font-family: genjyuu;
+    src: url(../font/Gen\ Jyuu\ Gothic\ Monospace\ Medium.ttf);
+  }
 
 *{
     margin: 0px;
@@ -46,6 +50,8 @@ header .container .logo{
 header .container ul{
     margin: 0px;
     padding: 0px;
+    position: relative;
+    top: 57px;
 }
 header .container ul li{
     list-style: none;
@@ -81,9 +87,12 @@ header .container ul li .btn:hover{
 }
 .hero h1{
     color: white;
-    font-size: 90px;
+    font-size: 110px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 700;
+    font-family: genjyuu;
+    margin-bottom: 0px;
+    word-spacing: -20px;
 }
 .section1{
     padding: 65px 0px;
@@ -342,6 +351,9 @@ footer .w-827 .newsletter input::placeholder{
     header .container .logo{
         left: 0px;
     }
+    .hero h1{
+        font-size: 80px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -513,6 +525,7 @@ footer .w-827 .newsletter input::placeholder{
     }
     .hero h1 {
         font-size: 45px;
+        word-spacing: 0px;
     }
     .section1 h5{
         font-size: 28px;
@@ -610,18 +623,18 @@ footer .w-827 .newsletter input::placeholder{
 }
 
 @media only screen and (max-width: 360px){
-    .mobile-menu{
+    /* .mobile-menu{
         min-height: unset;
     }
     .mobile-menu .bottom-section{
         position: static;
         padding-top: 140px;
-    }
+    } */
 }
 @media only screen and (max-width: 320px){
-    .mobile-menu .bottom-section{
+    /* .mobile-menu .bottom-section{
         padding-top: 80px;
-    }
+    } */
     .mobile-menu .bottom-section h5 {
         font-size: 25px;
     }
