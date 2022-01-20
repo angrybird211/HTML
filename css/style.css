@@ -38,6 +38,68 @@ header .container .hamMenuBtn{
     color: white;
 }
 
+.popupMenu{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 1111;
+    display: none;
+}
+.popupMenu .wrapper{
+    height: 241px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-position: center;
+}
+.popupMenu .wrapper h5{
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+.popupMenu .wrapper p{
+    margin: 0px;
+    font-size: 18px;
+}
+.popupMenu ul{
+    margin: 0;
+    padding: 0;
+    max-width: 720px;
+    margin: auto;
+    margin-top: 90px;
+    text-align: center;
+}
+.popupMenu ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 60px;
+}
+.popupMenu ul li:last-child{
+    margin-right: 0px;
+}
+.popupMenu ul li a{
+    color: #707070;
+    font-size: 20px;
+    text-decoration: none;
+}
+.popupMenu .container{
+    padding-top: 145px;
+    position: relative;
+}
+.popupMenu .close-btn{
+    position: absolute;
+    top: 56px;
+    right: 0px;
+}
+
+
+
 .heroSection{
     height: 100vh;
     width: 100%;
@@ -53,7 +115,10 @@ header .container .hamMenuBtn{
     text-align: center;
 }
 .heroSection .heroText{
-    margin-left: 100px;
+    width: 85%;
+}
+.heroSection .heroTextMobile{
+    display: none;
 }
 .heroSection h1{
     color: white;
@@ -220,7 +285,7 @@ footer ul li{
 footer ul li a{
     color: #545567;
     text-decoration: none;
-    font-family: 'IBM Plex Sans';
+    font-family: laomn;
 }
 footer .upperFooter{
     display: flex;
@@ -247,6 +312,7 @@ footer .middleFooter p{
     font-size: 12px;
     padding: 40px 0px;
     color: #545567;
+    font-family: 'IBM Plex Sans';
 }
 footer .copyright{
     padding-bottom: 20px;
@@ -312,6 +378,7 @@ footer .copyright p a{
         margin-left: 110px;
     }
 }
+
 @media only screen and (max-width: 1200px){
     .news #news-carousel .owl-stage-outer{
         margin-left: 60px;
@@ -322,9 +389,39 @@ footer .copyright p a{
     .rew .inner .nobr{
         width: unset;
     }
-
+    .popupMenu .container {
+        padding-top: 125px;
+        position: relative;
+    }
 }
+
+@media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1100px;
+}}
+
 @media only screen and (max-width: 800px){
+    .popupMenu ul li a{
+        font-size: 18px;
+    }
+    .popupMenu ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 40px;
+    }
+    .popupMenu ul{
+        margin-top: 25px;
+    }
+    .popupMenu .wrapper h5 {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 0px;
+    }
+    .popupMenu .wrapper p {
+        margin: 0px;
+        font-size: 16px;
+    }
+
     .auditionBall .inner img {
         width: 100%;
     }
@@ -344,10 +441,37 @@ footer .copyright p a{
     }
 }
 @media only screen and (max-width: 767px){
+    .popupMenu .container {
+        padding-top: 50px;
+        position: relative;
+    }
+    .popupMenu ul {
+        margin-top: 25px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .popupMenu ul li {
+        margin-right: 0px;
+        width: 50%;
+        margin-bottom: 15px;
+    }
+    .popupMenu .close-btn {
+        position: absolute;
+        top: 25px;
+        right: 10px;
+    }
+    .popupMenu .wrapper{
+        height: 170px;
+    }
     .heroSection .heroText {
         margin-left: 0px;
         max-width: 100%;
         width: 100%;
+        display: none;
+    }
+    .heroSection .heroTextMobile{
+        display: block;
+        max-width: 100%;
     }
     .auditionBall .inner {
         margin-bottom: 30px;

@@ -16,4 +16,12 @@ $('#news-carousel').owlCarousel({
     }
 });
 
+$(".hamMenuBtn").click(function(){
+    $(".popupMenu").show();
+});
+
+$(".popupMenu .close-btn").click(function(){
+    $(".popupMenu").hide();
+});
+
 new WOW().init();
