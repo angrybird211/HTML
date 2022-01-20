@@ -1,8 +1,7 @@
 $('#news-carousel').owlCarousel({
-    loop:true,
     margin:30,
     nav:true,
-    navText: ["<img src='./images/arrow-left.png'>","<img src='./images/arrow-right.png'>"],
+    navText: ["<button class='nav-item'><i class='bi-chevron-left'></i></button>","<button class='nav-item'><i class='bi-chevron-right'></i></button>"],
     responsive:{
         0:{
             items:2
